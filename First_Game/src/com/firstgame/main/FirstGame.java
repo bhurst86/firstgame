@@ -7,29 +7,27 @@ import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.util.Random;
-//https://www.youtube.com/watch?v=5ufOPX8N1Rg   Video 4 Completed
-//https://www.youtube.com/watch?v=3paMFMwVfWU   Video 5 Completed
-//https://www.youtube.com/watch?v=KpzvlvxZkcE   Video 6 Completed
-//https://www.youtube.com/watch?v=JrSjwQbTldg   Video 7 Completed
-//https://www.youtube.com/watch?v=Urg8AEIVyWA   Video 8 Completed
-//https://www.youtube.com/watch?v=urye2D3_mss   Video 9 Completed
-//https://www.youtube.com/watch?v=QgQUt3nuBx4   Video 10 Completed
-//https://www.youtube.com/watch?v=HRaJXVuZjRM#t=25.257667  Video 11 Completed
-//https://www.youtube.com/watch?v=K_CfBxvpd9A   Video 12 Completed
-//https://www.youtube.com/watch?v=RrahDyZXAv0   Video 13
-//https://www.youtube.com/watch?v=RrahDyZXAv0 Video 14 Complete
-
-//First Commit 
-//sdfg
-
 /*
-HedustMA – Forms 02
-Released under a Creative Commons license for noncommercial usage.
+https://www.youtube.com/watch?v=5ufOPX8N1Rg   Video 4 Completed
+https://www.youtube.com/watch?v=3paMFMwVfWU   Video 5 Completed
+https://www.youtube.com/watch?v=KpzvlvxZkcE   Video 6 Completed
+https://www.youtube.com/watch?v=JrSjwQbTldg   Video 7 Completed
+https://www.youtube.com/watch?v=Urg8AEIVyWA   Video 8 Completed
+https://www.youtube.com/watch?v=urye2D3_mss   Video 9 Completed
+https://www.youtube.com/watch?v=QgQUt3nuBx4   Video 10 Completed
+https://www.youtube.com/watch?v=HRaJXVuZjRM#t=25.257667  Video 11 Completed
+https://www.youtube.com/watch?v=K_CfBxvpd9A   Video 12 Completed
+https://www.youtube.com/watch?v=RrahDyZXAv0   Video 13
+https://www.youtube.com/watch?v=RrahDyZXAv0 Video 14 Complete
 */
+
 
 public class FirstGame extends Canvas implements Runnable{
 
-    public static final int WIDTH = 640, HEIGHT = WIDTH / 12 * 9;
+
+	private static final long serialVersionUID = -1422965890628797754L;
+
+	public static final int WIDTH = 640, HEIGHT = WIDTH / 12 * 9;
     
     private Thread thread;
     private boolean running = false;
