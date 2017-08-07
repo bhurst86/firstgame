@@ -87,7 +87,7 @@ public class FirstGame extends Canvas implements Runnable{
 
         if(gameState == STATE.Game){
             handler.addObject(new Player(WIDTH/2-32, HEIGHT/2-32, ID.Player, handler));  
-            handler.addObject(new BasicEnemy(r.nextInt(FirstGame.WIDTH - 50), r.nextInt(FirstGame.HEIGHT - 50), ID.BasicEnemy, handler));   
+            handler.addObject(new BasicEnemy(r.nextInt(FirstGame.WIDTH - 50), r.nextInt(FirstGame.HEIGHT - 50), ID.BasicEnemy, handler));  //first enemy 
         }else {
             for (int i = 0; i < 15; i++) {
                 handler.addObject(new MenuParticle(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.MenuParticle, handler));
