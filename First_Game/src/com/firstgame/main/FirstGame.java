@@ -155,7 +155,7 @@ public class FirstGame extends Canvas implements Runnable{
 	            if(HUD.HEALTH <= 0)
 	            {
 	                HUD.HEALTH = 100;              
-	                gameState = gameState.End;
+	                gameState = STATE.End;
 	                handler.clearEnemys();
 	                for (int i = 0; i < 15; i++) 
 	                {

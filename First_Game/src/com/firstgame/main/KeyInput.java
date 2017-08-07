@@ -10,7 +10,7 @@ public class KeyInput extends KeyAdapter{
     
     private Handler handler;
     private boolean[] keyDown = new boolean[4];
-    FirstGame game;
+    private FirstGame game;
     
     public KeyInput(Handler handler, FirstGame game){
         this.handler = handler;
@@ -41,7 +41,7 @@ public class KeyInput extends KeyAdapter{
         if(key == KeyEvent.VK_P)
         {
         	
-        	if(game.gameState == STATE.Game) {
+        	if(FirstGame.gameState == STATE.Game) {
         		if(FirstGame.paused) FirstGame.paused = false;     	
         		else FirstGame.paused = true;
         	}
