@@ -16,9 +16,9 @@ public class AudioPlayer {
     
     public static void load(){
         try {
-            soundMap.put("menu_sound", new Sound("res/button-3.ogg"));
+            soundMap.put("menu_sound", new Sound("First_Game/res/button-3.ogg"));
             
-            musicMap.put("music", new Music("res/background_music.ogg"));
+            musicMap.put("music", new Music("First_Game/res/background_music.ogg"));
         } catch (SlickException ex) {
             ex.printStackTrace();
         }
