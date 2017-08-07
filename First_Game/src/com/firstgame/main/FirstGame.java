@@ -17,8 +17,8 @@ https://www.youtube.com/watch?v=urye2D3_mss   Video 9 Completed
 https://www.youtube.com/watch?v=QgQUt3nuBx4   Video 10 Completed
 https://www.youtube.com/watch?v=HRaJXVuZjRM#t=25.257667  Video 11 Completed
 https://www.youtube.com/watch?v=K_CfBxvpd9A   Video 12 Completed
-https://www.youtube.com/watch?v=RrahDyZXAv0   Video 13
-https://www.youtube.com/watch?v=RrahDyZXAv0 Video 14 Complete
+https://www.youtube.com/watch?v=RrahDyZXAv0   Video 13 Completed
+https://www.youtube.com/watch?v=RrahDyZXAv0 Video 14 11:17
 */
 
 
@@ -43,10 +43,12 @@ public class FirstGame extends Canvas implements Runnable{
     private HUD hud;
     private Spawn spawner;
     private Menu menu;
+    private Shop shop;
     
     public enum STATE {
       Menu,
       Help,
+      Shop,
       End,
       Select,
       Game
@@ -69,6 +71,7 @@ public class FirstGame extends Canvas implements Runnable{
     	
     	handler = new Handler();
         hud = new HUD();
+        shop = new Shop(handler);
         menu = new Menu(this, handler, hud);
         this.addKeyListener(new KeyInput(handler, this));
         this.addMouseListener(menu);
@@ -183,8 +186,7 @@ public class FirstGame extends Canvas implements Runnable{
         
         g.setColor(Color.black);
         g.fillRect(0, 0, WIDTH, WIDTH);
-        
-        handler.render(g);
+
         
         if(paused)
         {
@@ -193,9 +195,14 @@ public class FirstGame extends Canvas implements Runnable{
         }
         
         if(gameState == STATE.Game){
-            hud.render(g);          
+            hud.render(g);
+            handler.render(g);
+        }else if (gameState == STATE.Shop) {
+        	shop.render(g);
+        
         }else if(gameState == STATE.Menu || gameState == STATE.Help || gameState == STATE.End || gameState == STATE.Select){
             menu.render(g);
+            handler.render(g);
         }
         
         g.dispose();

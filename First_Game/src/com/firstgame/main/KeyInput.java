@@ -47,6 +47,10 @@ public class KeyInput extends KeyAdapter{
         	}
         }
         if(key == KeyEvent.VK_ESCAPE)System.exit(0);
+        if(key == KeyEvent.VK_SPACE) {
+        	if(FirstGame.gameState == STATE.Game) FirstGame.gameState = STATE.Shop;
+        	else if (FirstGame.gameState == STATE.Shop) FirstGame.gameState = STATE.Game;
+        }
     }
     public void keyReleased(KeyEvent e){
         int key = e.getKeyCode();

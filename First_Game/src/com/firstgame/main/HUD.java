@@ -37,6 +37,7 @@ public class HUD {
         
         g.drawString("Score: " + score, 15, 64);
         g.drawString("Level: " + level, 15, 80);
+        g.drawString("Space for Shop", 15, 94);
     }
     public void score(int score){
         this.score = score;
