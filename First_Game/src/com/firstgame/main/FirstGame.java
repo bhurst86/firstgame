@@ -18,7 +18,7 @@ https://www.youtube.com/watch?v=QgQUt3nuBx4   Video 10 Completed
 https://www.youtube.com/watch?v=HRaJXVuZjRM#t=25.257667  Video 11 Completed
 https://www.youtube.com/watch?v=K_CfBxvpd9A   Video 12 Completed
 https://www.youtube.com/watch?v=RrahDyZXAv0   Video 13 Completed
-https://www.youtube.com/watch?v=RrahDyZXAv0 Video 14 11:17
+https://www.youtube.com/watch?v=2HaTSSE4skU Video 14 11:17
 */
 
 
@@ -71,10 +71,11 @@ public class FirstGame extends Canvas implements Runnable{
     	
     	handler = new Handler();
         hud = new HUD();
-        shop = new Shop(handler);
+        shop = new Shop(handler, hud);
         menu = new Menu(this, handler, hud);
         this.addKeyListener(new KeyInput(handler, this));
         this.addMouseListener(menu);
+        this.addMouseListener(shop);
         
         AudioPlayer.load();
         
