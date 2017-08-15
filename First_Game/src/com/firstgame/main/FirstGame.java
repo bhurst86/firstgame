@@ -63,7 +63,7 @@ public class FirstGame extends Canvas implements Runnable{
     	BufferedImageLoader loader = new BufferedImageLoader();
         
     	try {
-			sprite_sheet = loader.loadImage("/sprite_images.png");
+			sprite_sheet = loader.loadImage("res/sprite_images.png");
 			System.out.println("Loaded");
 		} catch (Exception e) {
 			e.printStackTrace();
